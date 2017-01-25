@@ -1,0 +1,10 @@
+## Customize CircleCI setup
+machine:
+  environment:
+    CODECLIMATE_REPO_TOKEN: 06d03dd2b58fa4613efcfbe8974843757795ead3fd9885c4fc6d3d11af31bf5f #replace with your token
+
+database:
+  override:
+    # replace CircleCI's generated database.yml
+    - cp config/database.yml.ci config/database.yml
+    - bundle exec rake db:drop db:create db:migrate
