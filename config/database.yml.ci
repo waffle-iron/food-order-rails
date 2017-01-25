@@ -1,0 +1,6 @@
+test:
+  adapter: mysql2
+  pool: 5
+  username:
+  password:
+  database: circle_test
